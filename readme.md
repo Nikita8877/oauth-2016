@@ -6,6 +6,13 @@
 
 * RubyMine
 
+# Browser plugins
+
+* Web Developer
+* Firefox
+* Rainbow
+* Extended statusbar
+
 # Methodology
 
 * Waterfall
