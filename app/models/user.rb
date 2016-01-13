@@ -11,4 +11,14 @@
 #
 
 class User < ActiveRecord::Base
+  validates :uid, presence: true
+  validates :provider, presence: true
+  validates :uid, uniqueness: { scope: :provider }
+
+  def self.from_omniauth(auth_hash)
+    user = User.find_or_initialize_by!({uid: auth_hash['uid'], provider: auth_hash['provider']})
+    user.name = auth_hash['info']['name']
+    user.save!
+    user
+  end
 end

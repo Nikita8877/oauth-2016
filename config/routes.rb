@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: 'sessions#auth_failure'
 
+  delete '/logout', to: 'sessions#destroy', as: :logout
+
   root to: 'pages#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

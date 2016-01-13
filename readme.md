@@ -35,3 +35,25 @@ Testing
 * MiniTest
 * Cucumber (BDD - behavior driven development)
 ** Selenium
+
+# Fork & Pull Request
+
+1. Fork
+2. `git clone`
+3. `git checkout -b your_feature`
+4. `git add .`
+5. `git commit -am "message"`
+6. `git push origin your_feature`
+7. Open repo at GitHub
+8. New pull request
+
+# HTTP Verbs
+
+* GET
+* POST
+
+Emulated (as POST):
+
+* PUT
+* PATCH (aka PUT)
+* DELETE
