@@ -57,3 +57,10 @@ Emulated (as POST):
 * PUT
 * PATCH (aka PUT)
 * DELETE
+
+# Resources
+
+* [guides.rubyonrails.org](guides.rubyonrails.org)
+* Book of Ruby
+* [http://api.rubyonrails.org/](http://api.rubyonrails.org/)
+* [http://ruby-doc.org/core-2.2.2/](http://ruby-doc.org/core-2.2.2/)
