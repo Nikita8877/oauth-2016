@@ -17,7 +17,7 @@
 
 * Waterfall
 * Agile (2001)
-** iterations (1-2 weeks)
+    * iterations (1-2 weeks)
 * Lean
 * Scrum
 
@@ -34,7 +34,7 @@ Testing
 * RSpec
 * MiniTest
 * Cucumber (BDD - behavior driven development)
-** Selenium
+    * Selenium
 
 # Fork & Pull Request
 
@@ -67,10 +67,11 @@ Emulated (as POST):
 
 # Todo
 
-* API
+* API (FB/VK??? posting)
 * Localization
 * E-mail sending
 * AR associations
+* Braintree/Stripe/etc
 
 # API
 
