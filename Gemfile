@@ -4,11 +4,14 @@ gem "figaro"
 
 gem 'rails', '4.2.5'
 
+gem 'thin'
+
 group :development do
   gem 'sqlite3'
   gem 'annotate'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-rails'
 end
 
 group :production do
@@ -26,10 +29,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 
-# OAuth 2
+# OAuth 2 & API
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
+gem 'twitter'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
