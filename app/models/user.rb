@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
   validates :provider, presence: true
   validates :uid, uniqueness: { scope: :provider }
 
+  has_many :appointments, dependent: :nullify
+  has_many :physicians, through: :appointments
+  has_many :pictures, as: :imageable
+
   def self.from_omniauth(auth_hash)
     user = User.find_or_initialize_by({uid: auth_hash['uid'], provider: auth_hash['provider']})
     user.name = auth_hash['info']['name']

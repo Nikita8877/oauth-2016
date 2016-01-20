@@ -1,17 +1,15 @@
 <h1>Welcome!</h1>
 
 <% if current_user %>
-  <p>
-    You are logged in as <%= current_user.name %>
-    <%= link_to 'Log Out', logout_path, method: :delete %>
+  You are logged in as <%= current_user.name %>
+  <%= link_to 'Log Out', logout_path, method: :delete %>
 
-    <div>
-      <% if current_user.provider == 'twitter' %>
-        <%= link_to 'Tweet!', tweets_path, method: :post %>
-        <%= link_to 'Get Tweet', tweets_path %>
-      <% end %>
-    </div>
-  </p>
+  <div>
+    <% if current_user.provider == 'twitter' %>
+      <%= link_to 'Tweet!', tweets_path, method: :post %>
+      <%= link_to 'Get Tweet', tweets_path %>
+    <% end %>
+  </div>
 <% else %>
   <%= link_to 'VK', '/auth/vkontakte' %><br>
   <%= link_to 'Fb', '/auth/facebook' %><br>

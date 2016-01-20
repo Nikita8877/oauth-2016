@@ -64,13 +64,16 @@ Emulated (as POST):
 * Book of Ruby
 * [http://api.rubyonrails.org/](http://api.rubyonrails.org/)
 * [http://ruby-doc.org/core-2.2.2/](http://ruby-doc.org/core-2.2.2/)
+* [http://apidock.com](http://apidock.com)
 
 # Todo
 
-* API (FB/VK??? posting)
-* Localization
-* E-mail sending
 * AR associations
+* Model caching
+* Gem files
+* Localization
+* E-mail sending, scheduler (rake)
+* API (FB/VK??? posting)
 * Braintree/Stripe/etc
 
 # API

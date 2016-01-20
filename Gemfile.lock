@@ -66,6 +66,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.9.1)
     execjs (2.6.0)
+    faker (1.6.1)
+      i18n (~> 0.5)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     figaro (1.1.1)
@@ -218,6 +220,7 @@ GEM
       json (>= 1.8.0)
     unf (0.1.4)
       unf_ext
+    unf_ext (0.0.7.1)
     unf_ext (0.0.7.1-x86-mingw32)
 
 PLATFORMS
@@ -229,6 +232,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.1.0)
+  faker
   figaro
   jquery-rails
   jquery-turbolinks
