@@ -68,8 +68,7 @@ Emulated (as POST):
 
 # Todo
 
-* AR associations
-* Model caching
+* Caching...
 * Gem files
 * Localization
 * E-mail sending, scheduler (rake)
@@ -81,3 +80,8 @@ Emulated (as POST):
 * [https://sferik.github.io/twitter/](https://sferik.github.io/twitter/) (for Twitter)
 * [https://github.com/arsduo/koala](https://github.com/arsduo/koala) (for Facebook)
 * [https://github.com/7even/vkontakte_api](https://github.com/7even/vkontakte_api) (for Vkontakte)
+
+# Pagination
+
+* will_paginate
+* kaminari

@@ -21,6 +21,9 @@ class User < ActiveRecord::Base
   has_many :appointments, dependent: :nullify
   has_many :physicians, through: :appointments
   has_many :pictures, as: :imageable
+  has_many :orders, dependent: :destroy
+
+  after_commit :flush_cache
 
   def self.from_omniauth(auth_hash)
     user = User.find_or_initialize_by({uid: auth_hash['uid'], provider: auth_hash['provider']})
@@ -32,5 +35,20 @@ class User < ActiveRecord::Base
     end
     user.save!
     user
+  end
+
+  def self.all_cached
+    Rails.cache.fetch('all_users') { User.includes(:orders).order('created_at ASC') }
+  end
+
+  def self.find_by_id_cached(id)
+    Rails.cache.fetch("user_#{id}") { find_by(id: id) }
+  end
+
+  private
+
+  def flush_cache
+    Rails.cache.delete('all_users')
+    Rails.cache.delete("user_#{self.id}")
   end
 end

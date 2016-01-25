@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-20.times { Physician.create!({name: Faker::Name.name}) }
+20.times { |i| User.create!({name: "test #{i}", provider: 'sdfsdf', uid: rand(100000000)}) }

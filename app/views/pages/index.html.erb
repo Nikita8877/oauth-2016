@@ -1,5 +1,16 @@
 <h1>Welcome!</h1>
 
+<ul>
+  <% @users.each do |user| %>
+    <%= user.name %>
+    <% user.orders.each do |order| %>
+      <li><%= order.title %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= will_paginate @users %>
+
 <% if current_user %>
   You are logged in as <%= current_user.name %>
   <%= link_to 'Log Out', logout_path, method: :delete %>

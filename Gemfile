@@ -6,6 +6,8 @@ gem 'rails', '4.2.5'
 
 gem 'thin'
 
+gem 'will_paginate'
+
 group :development do
   gem 'sqlite3'
   gem 'annotate'
@@ -13,6 +15,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'faker'
+  gem "bullet"
 end
 
 group :production do
