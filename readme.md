@@ -68,7 +68,7 @@ Emulated (as POST):
 
 # Todo
 
-* Caching...
+* Caching (page caching, fragment caching)
 * Gem files
 * Localization
 * E-mail sending, scheduler (rake)

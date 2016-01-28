@@ -46,6 +46,8 @@ module Todo
         Bullet.bullet_logger = true
         Bullet.console = true
       end
+
+      config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
     end
   end
 end
