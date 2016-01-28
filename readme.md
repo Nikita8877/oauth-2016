@@ -74,6 +74,7 @@ Emulated (as POST):
 * E-mail sending, scheduler (rake)
 * API (FB/VK??? posting)
 * Braintree/Stripe/etc
+* Testing
 
 # API
 
