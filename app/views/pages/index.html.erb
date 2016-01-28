@@ -1,13 +1,15 @@
 <h1>Welcome!</h1>
 
-<ul>
-  <% @users.each do |user| %>
-    <%= user.name %>
-    <% user.orders.each do |order| %>
-      <li><%= order.title %></li>
+<% cache do %>
+  <ul>
+    <% @users.each do |user| %>
+      <%= user.name %>
+      <% user.orders.each do |order| %>
+        <li><%= order.title %></li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+<% end %>
 
 <%= will_paginate @users %>
 
