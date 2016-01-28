@@ -1,6 +1,6 @@
 <h1>Welcome!</h1>
 
-<% cache do %>
+<% cache('users_orders') do %>
   <ul>
     <% @users.each do |user| %>
       <%= user.name %>

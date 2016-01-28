@@ -39,6 +39,8 @@ gem 'omniauth-twitter'
 gem 'omniauth-vkontakte'
 gem 'twitter'
 
+gem 'dalli'
+
 gem 'actionpack-page_caching'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
