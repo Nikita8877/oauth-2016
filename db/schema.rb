@@ -14,14 +14,12 @@
 ActiveRecord::Schema.define(version: 20160125083529) do
 
   create_table "appointments", force: :cascade do |t|
-    t.integer  "phycisian_id"
     t.integer  "user_id"
     t.datetime "scheduled_at"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
-  add_index "appointments", ["phycisian_id"], name: "index_appointments_on_phycisian_id"
   add_index "appointments", ["user_id"], name: "index_appointments_on_user_id"
 
   create_table "orders", force: :cascade do |t|
@@ -32,12 +30,6 @@ ActiveRecord::Schema.define(version: 20160125083529) do
   end
 
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
-
-  create_table "physicians", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "pictures", force: :cascade do |t|
     t.string   "name"
