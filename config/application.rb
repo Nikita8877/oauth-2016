@@ -48,6 +48,10 @@ module Todo
       end
 
       config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
+
+      I18n.available_locales = [:en, :ru]
+
+      config.i18n.default_locale = :ru
     end
   end
 end
