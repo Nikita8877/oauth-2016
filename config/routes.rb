@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:index, :new, :create, :edit, :update]
 
-  root to: 'articles#index'
-
   get 'contact', to: 'pages#contact'
+
+  root to: 'articles#index'
 end

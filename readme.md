@@ -65,12 +65,13 @@ Emulated (as POST):
 * [http://api.rubyonrails.org/](http://api.rubyonrails.org/)
 * [http://ruby-doc.org/core-2.2.2/](http://ruby-doc.org/core-2.2.2/)
 * [http://apidock.com](http://apidock.com)
+* Ruby Metaprogramming (pragprog.com)
+* Learn Ruby the Hard Way
+* http://www.sitepoint.com/watch-elegant-coding-through-dynamic-methods/
 
 # Todo
 
-* Caching (page caching, fragment caching)
 * Gem files
-* Localization
 * E-mail sending, scheduler (rake)
 * API (FB/VK??? posting)
 * Braintree/Stripe/etc

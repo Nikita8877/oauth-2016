@@ -1,4 +1,6 @@
 <% content_for(:page_header) {t('.title')} %>
 
+<%= l(Time.current, format: '%d %B %Y %H:%M:%S') %>
+
 <small><%= t('.count', :count => @articles.length) %></small>
 <%= render @articles %>
