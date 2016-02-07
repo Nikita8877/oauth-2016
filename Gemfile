@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'geocoder'
+
 gem 'rails-i18n', '~> 4.0.0'
 
 gem "figaro"
