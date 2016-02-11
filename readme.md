@@ -88,3 +88,7 @@ Emulated (as POST):
 * will_paginate
 * kaminari
 * [https://github.com/flyerhzm/bullet](https://github.com/flyerhzm/bullet)
+
+# Plain Ruby
+
+* https://github.com/bodrovis/Guesser
