@@ -68,9 +68,11 @@ Emulated (as POST):
 * Ruby Metaprogramming (pragprog.com)
 * Learn Ruby the Hard Way
 * http://www.sitepoint.com/watch-elegant-coding-through-dynamic-methods/
+* http://eloquentjavascript.net/
 
 # Todo
 
+* JS, jQuery, CoffeeScript (?)
 * Gem files
 * E-mail sending, scheduler (rake)
 * API (FB/VK??? posting)
