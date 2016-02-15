@@ -8,10 +8,6 @@ module Guesser
       @name = name
     end
 
-    def generate_number_to_guess!(limit)
-      self.number_to_guess = rand(limit)
-    end
-
     def guess
       $stdin.gets.to_i
     end
@@ -20,9 +16,18 @@ module Guesser
       guess == number_to_guess
     end
 
-    def generate_secret_number_for(player)
-      puts "Preparing a number to guess..."
-      generate_number_to_guess!(5)
+    def guessed!
+      self.number_to_guess = nil # Player guessed this number, a new one would be needed
+      self.points += 1
+    end
+
+    def generate_secret_number_for!(output)
+      output.puts "Preparing a number to guess..."
+      self.number_to_guess = rand(1)
+    end
+
+    def won?(game)
+      points >= 1
     end
   end
 end

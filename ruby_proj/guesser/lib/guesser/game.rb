@@ -1,28 +1,40 @@
 module Guesser
   class Game
-    attr_reader :output
+    attr_reader :output, :options
     attr_accessor :winner, :players
 
-    def initialize(output)
-      @output, @players = output, []
+    def initialize(output, argv)
+      @output, @players, @options = output, [], GameOptions.new(argv)
     end
 
     def start!
       welcome
       initialize_players
       play
+      show_winner
     end
 
     private
 
     def play
-      players.each do |player|
-        sleep 1
-        output.puts "\n=== It's now #{player.name}'s turn."
-        player.generate_secret_number_for player
-        output.puts "Enter your guess:"
-        if player.guessed?
-          puts "right"
+      until winner do
+        players.each do |player|
+          sleep 1
+          output.puts "\n=== It's now #{player.name}'s turn."
+          player.generate_secret_number_for! output
+          output.puts "Enter your guess:"
+          if player.guessed?
+            output.puts "You've guessed!"
+            player.guessed!
+          else
+            output.puts "Wrong! Try again next end turn!"
+          end
+
+          if player.won?(self)
+            output.puts 'winner'
+            self.winner = player
+            break
+          end
         end
       end
     end
@@ -36,12 +48,18 @@ module Guesser
     end
 
     def initialize_players
-      output.puts "Starting the game with #{2} players(s)..."
+      output.puts "Starting the game with #{options.players} players(s)..."
 
-      2.times do |i|
+      options.players.times do |i|
         output.puts "Enter a name for player #{i + 1}"
         players << Player.new($stdin.gets.strip)
       end
+    end
+
+    def show_winner
+      output.puts "\n=== We have a winner! ==="
+      output.puts "#{winner.name} won the match!"
+      output.puts "Thanks for playing and see you again soon!"
     end
   end
 end
