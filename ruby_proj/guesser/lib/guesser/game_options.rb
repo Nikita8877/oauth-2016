@@ -18,12 +18,14 @@ module Guesser
       return defaults if argv.empty?
 
       begin
-        options = Slop.parse(argv, help: true,
-                             banner: 'Welcome to the Guesser game. Here is the list of available options:') do |o|
-          o.integer '-o', '--points', 'Points to win (integer, greater than 0).'#, argument: true
-          o.integer '-i', '--limit', 'Guessed number limit (integer, greater than 0).', argument: true
-          o.integer '-p', '--players', 'How many players will participate (integer, greater than 0).',
-                    argument: true
+        options = Slop.parse argv do |o|
+          o.integer '-o', '--points', 'Points to win (integer, greater than 0).'
+          o.integer '-i', '--limit', 'Guessed number limit (integer, greater than 0).'
+          o.integer '-p', '--players', 'How many players will participate (integer, greater than 0).'
+          o.on '--help' do
+            puts o
+            exit
+          end
         end.to_hash
 
         normalize! options
