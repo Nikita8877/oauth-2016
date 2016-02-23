@@ -72,6 +72,7 @@ Emulated (as POST):
 
 # Todo
 
+* OpenSource
 * JS, jQuery, CoffeeScript (?)
 * Gem files
 * E-mail sending, scheduler (rake)
