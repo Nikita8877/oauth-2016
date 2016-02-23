@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
 
 gem 'rspec'
-gem 'pry'
-gem 'slop'
+gem 'slop', '~> 4' # 4.1.2
