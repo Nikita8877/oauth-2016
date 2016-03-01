@@ -72,7 +72,6 @@ Emulated (as POST):
 
 # Todo
 
-* JS, jQuery, CoffeeScript (?)
 * E-mail sending, scheduler (rake)
 * API (FB/VK??? posting)
 * Braintree/Stripe/etc
