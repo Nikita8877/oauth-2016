@@ -12,5 +12,8 @@
 //
 //= require jquery
 //= require jquery.turbolinks
+//= require test
+//= require test2
+//= require test_js
 //= require jquery_ujs
 //= require turbolinks
